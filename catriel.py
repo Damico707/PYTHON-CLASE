@@ -24,7 +24,7 @@ with myFile:
 with open('ventas_semana_pasada.csv') as f:
     DictReader_obj = DictReader(f)
     for item in DictReader_obj:
-        print(item['DIA']): {item['JORDANA1']}")
+     print(item['DIA']): {item['JORDANA1']}")
 
 def write_reservations(f, reservations, headers)
 with (f, "w", newline='')as f2:
@@ -48,4 +48,23 @@ headers = [
         'cost_hourly'
         'cost_upfront
         'count'
-]
+        'count_used',
+        ]
+reservations = [
+    {"availability_zone": 2,
+        "tenancy": 3,
+        'product':1,
+        'cost_hourly': 3500,
+        'cost_upfront': 4800,
+        "count": 45,
+        "count_used":1
+    },{"availability_zone": 3,
+        "tenancy": 3,
+        'product': 4,
+        'cost_hourly': 3700
+        'cost_upfront': 5800,
+        "count": 25,
+        "count_used":13
+
+    }]      
+write_reservations("reservations.csv", reservations, headers)
