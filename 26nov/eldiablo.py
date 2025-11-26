@@ -1,0 +1,10 @@
+miarchivo = open("uwu.txt", "r")
+contenido = miarchivo.read()
+print(contenido)
+miarchivo.close()
+
+miarchivo = open("uwu.txt", "a")
+miarchivo.write("\nSI")
+miarchivo.write("\n¿De pelo negro?")
+miarchivo.write("\nSI")
+miarchivo.close()
