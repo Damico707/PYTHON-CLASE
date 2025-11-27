@@ -10,9 +10,11 @@ def menu():
     print("4. ELiminar producto")
     print("5. Salir del programa\n")
     while True:
-        choice = int(input("--> ¿Que desea hacer?")) 
-        if choice not in range (1, 6):
-            print("no .")
-        else: 
-            break
+        try:
+            choice = int(input("--> ¿Que desea hacer?")) 
+            if choice not in range (1, 6):
+                 print("no .")
+            else: break
+        except TypeError:   
+            print("Su eleccion debe ser un numero...")
     return choice
