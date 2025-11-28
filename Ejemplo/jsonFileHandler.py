@@ -7,7 +7,7 @@ def readFile(fileName):
             fileData = load(f)
             f.close
         return fileData
-    except FileNotFoundError:
+    except:
         return []
 
 def saveFile(fileName, data):
